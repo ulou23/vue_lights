@@ -1,5 +1,9 @@
-# untitled
+# VUE_LAMP
 
+* VUEX 
+* AXIOS 
+* BOOTSTRAP
+* JSON-SERVER  
 ## Project setup
 ```
 npm install
