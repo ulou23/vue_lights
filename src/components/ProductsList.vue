@@ -1,10 +1,29 @@
 <template>
-
+<div>
+    <div v-for="p in products" v-bind:key="p.id" class="card m-1 p-1 bg-light">
+        <h4>
+            {{p.name}}
+            <span class="badge badge-pill badge-primary float-right">
+                {{p.price | currency}}
+            </span>
+        </h4>
+        <div class="card-text bg-white p-1"> {{ p.description}}</div>
+    </div>
+</div>
 </template>
 
 <script>
+    import { mapGetters } from 'vuex';
     export default {
-        name: "ProductsList"
+        name: "ProductsList",
+        computed: {
+            ...mapGetters({products: "products"})
+        },
+        filters: {
+            currency(v){
+                return new Intl.NumberFormat("en-US",{ style: "currency", currency:"USD"}).format(v);
+            }
+        }
     }
 </script>
 
