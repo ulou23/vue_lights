@@ -17,11 +17,11 @@
     export default {
         name: "ProductsList",
         computed: {
-            ...mapGetters({products: "products"})
+            ...mapGetters( {products: "productsFilteredByCat"})
         },
         filters: {
             currency(v){
-                return new Intl.NumberFormat("en-US",{ style: "currency", currency:"USD"}).format(v);
+                return new Intl.NumberFormat("pl-PL",{ style: "currency", currency:"PLN"}).format(v);
             }
         }
     }

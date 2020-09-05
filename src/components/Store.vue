@@ -7,14 +7,9 @@
         </div>
         <div class="row">
             <div class="col-3 bg-primary p-2">
-                <h4 class="text-white m-2"> Kategorie</h4>
+                <CatControls />
             </div>
             <div class="col-9 bg-dark p-2">
-                <h4 class="text-white m-2">Produkty</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-9 p-2">
                 <ProductsList/>
             </div>
         </div>
@@ -23,9 +18,10 @@
 
 <script>
     import ProductsList from "./ProductsList";
+    import CatControls from "./CatControls";
     export default {
         name: "store",
-        components: { ProductsList}
+        components: { ProductsList, CatControls }
     }
 </script>
 
