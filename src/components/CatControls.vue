@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <div class="row my-2" v-for="c in categories" v-bind:key="c">
-            <button class="btn btn-block" v-on:click="setCurrCat(c)" v-bind:class="c == catAll ? 'btn-primary' : 'btn-secondary'">{{c}}</button>
+            <button class="btn btn-block" v-on:click="setCurrCat(c)" v-bind:class="c == catAll ? 'btn-light' : 'btn-secondary'">{{c}}</button>
         </div>
     </div>
 </template>
