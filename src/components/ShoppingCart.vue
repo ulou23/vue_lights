@@ -1,7 +1,14 @@
 <template>
-<h4 class="bg-secondary text-white text-center p-2">
-    Koszyk zastepcza tresc
-</h4>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-dark text-white">
+            <a class="navbar-brand">LAMP ATELIER</a>
+        </div>
+    </div>
+    <div class="row">
+
+    </div>
+</div>
 </template>
 
 <script>
