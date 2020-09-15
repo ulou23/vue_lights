@@ -8,13 +8,15 @@
             </span>
         </h4>
         <div class="card-img"></div>
-        <div class="card-text bg-white p-1"> {{ p.description}}</div>
-    </div>
+        <div class="card-text bg-white p-1"> {{ p.description}}
+        <button class="btn btn-outline-success btn-sm float-right" v-on:click="handleProAdd(p)">Add to cart</button>
+    </div></div>
 </div>
 </template>
 
 <script>
-    import { mapGetters } from 'vuex';
+    import { mapGetters, mapMutations } from 'vuex';
+
     export default {
         name: "ProductsList",
 
@@ -25,6 +27,14 @@
         filters: {
             currency(v){
                 return new Intl.NumberFormat("pl-PL",{ style: "currency", currency:"PLN"}).format(v);
+            }
+        },
+        methods: {
+            ...mapMutations({addPro: "cart/addPro"}),
+            handleProAdd(product){
+                this.addPro(product);
+                this.$router.push("/cart");
+
             }
         }
     }

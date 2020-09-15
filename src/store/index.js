@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import Axios from "axios";
+import CartModule from "./cart";
 
 Vue.use(Vuex);
 const burl="http://localhost:3500";
@@ -9,6 +10,7 @@ const caturl=`${burl}/categories`
 
 export default new Vuex.Store({
     strict: true,
+    modules:{cart: CartModule},
     state: {
         products: [],
         categoriesData:[],
