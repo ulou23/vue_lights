@@ -24,6 +24,9 @@ export default {
             if(index>-1){
                 state.lines.splice(index,1)
             }
+        },
+        setCartData(state,data){
+            state.lines=data;
         }
     }
 }
